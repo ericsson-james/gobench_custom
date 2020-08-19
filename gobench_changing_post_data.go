@@ -225,6 +225,10 @@ func NewConfiguration() *Configuration {
 			log.Fatalf("Error in ioutil.ReadFile for file path: %s Error: ", postDataFilePath, err)
 		}
 
+// I am going to print the value of data as a byte array and see what happens
+	s := string([]byte{65, 66, 67, 226, 130, 172})
+	fmt.Println(s)
+// End of my modifications
 		configuration.postData = data
 	}
 

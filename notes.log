@@ -1,0 +1,20 @@
+If the postDataFilePath is set then it uses ioutil.ReadFile to set configuration.postData
+
+Configuration is a struct:
+
+type Configuration struct {
+	urls       []string
+	method     string
+	postData   []byte
+	requests   int64
+	period     int64
+	keepAlive  bool
+	authHeader string
+	myClient fasthttp.Client
+}
+
+The body is set in func client()
+req.SetBody(configuration.postData)
+
+
+The value
